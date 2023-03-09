@@ -1,0 +1,8 @@
+/.vs
+bin
+obj
+libs
+packages
+*.vspscc
+*.vssscc
+UpdateLog*.htm
