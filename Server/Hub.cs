@@ -35,9 +35,16 @@ namespace xemtest
             return result;
         }
 
+		public void SendMessage(string text) 
+		{
+			this.logger.LogInformation($"Server received command 'SendMessage'. Params: {text}");
+			this.Clients.All.ReceiveMessage("Test from server");
+		}
+
 		public override Task OnConnectedAsync()
 		{
 			this.logger.LogInformation($"User connected - {this.Context.ConnectionId}");
+			this.Clients.All.ReceiveMessage("Test from server on start");
 			return base.OnConnectedAsync();
 		}
 
