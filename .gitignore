@@ -6,3 +6,8 @@ packages
 *.vspscc
 *.vssscc
 UpdateLog*.htm
+x64
+Release
+out
+HubConnectionSample.dir
+CMakeFiles
